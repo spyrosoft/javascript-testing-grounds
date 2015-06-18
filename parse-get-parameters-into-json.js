@@ -9,6 +9,8 @@ get_parameters_split.forEach(
 		var get_parameter = get_parameter_split.split( '=' );
 		try
 		{
+			// Note that this opens up a cross site scripting vulnerability
+			// Scrub your input first
 			get_parameters[ get_parameter[ 0 ] ] = eval( get_parameter[ 1 ] );
 		}
 		catch ( error )
