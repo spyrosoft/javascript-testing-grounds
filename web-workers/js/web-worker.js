@@ -13,8 +13,15 @@ var employee_lookup_table = [
 
 onmessage = function( message_event )
 {
-	for ( var employee in employee_lookup_table )
+	var message = message_event.data;
+	for ( var employee_index in employee_lookup_table )
 	{
-		console.log( employee );
+		var employee = employee_lookup_table[ employee_index ];
+		if ( employee[ 'first-name' ] === message[ 'first-name' ]
+			&& employee[ 'last-name' ] === message[ 'last-name' ] )
+		{
+			postMessage( employee_lookup_table[ employee_index ] );
+			return;
+		}
 	}
 };

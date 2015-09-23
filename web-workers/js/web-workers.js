@@ -19,6 +19,15 @@ function begin_web_workers_demo()
 		'first-name' : 'Larry',
 		'last-name' : 'Underbarton'
 	};
-	
 	demo_web_worker.postMessage( worker_message );
+}
+
+demo_web_worker.onmessage = function( message_event )
+{
+	var message = message_event.data;
+	$( '.results' ).html(
+		'First Name: ' + message[ 'first-name' ] + '<br />'
+		+ 'Last Name: ' + message[ 'last-name' ] + '<br />'
+		+ 'Occupation: ' + message[ 'occupation' ]
+	);
 }
