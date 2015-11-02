@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="./css/normalize.min.css" rel="stylesheet" type="text/css" />
+		<link href="./css/foundation.min.css" rel="stylesheet" type="text/css" />
+		<link href="./css/major-order-storage.css" rel="stylesheet" type="text/css" />
+		<script src="./js/modernizr.js"></script>
+		<script src="./js/jquery.js"></script>
+		<script src="./js/foundation.min.js"></script>
+		<script src="./js/major-order-storage.js"></script>
+		<meta charset="utf-8">
+		<title>Row Or Column Major Order Benchmark Test</title>
+	</head>
+	<body>
+		<div class="row">
+			<div class="columns">
+				<h1>Array Major Order Storage Type</h1>
+				<p>
+					In JavaScript (according to your implementation), are arrays stored in row major order or column major order?
+				</p>
+				<button class="begin">Begin</button>
+				<button class="stop">Stop</button>
+				<h2>Row Major Order: <span class="total row-major-order">0</span></h2>
+				<h2>Column Major Order: <span class="total row-major-order">0</span></h2>
+				<p>
+					As far as I can tell, they are identical. The compiler is either optimizing accordingly, or not optimizing at all.
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

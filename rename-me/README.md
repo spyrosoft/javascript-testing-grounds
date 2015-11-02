@@ -1,0 +1,1 @@
+A benchmark experiment to identify whether dimensional arrays have faster operations via row major order or column major order.
